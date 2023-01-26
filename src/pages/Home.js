@@ -29,12 +29,13 @@ export default function Home() {
   return (
     <Container>
       <Title>
-        Phonebook manager welcome page{' '}
+        Phone Book Web Application{' '}
         <IconContext.Provider value={{ color: '#E6CEAA', size: 200 }}>
           <Icon>
             <RiContactsBookFill />
           </Icon>
         </IconContext.Provider>
+        Please, Sign up or Log in to have access to the Phonebook!
       </Title>
     </Container>
   );
