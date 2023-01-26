@@ -45,6 +45,7 @@ h5,
 h6 {
   padding: 0;
   margin: 0;
+  text-align: center;
 }
 ul, nav {
   margin: 0;

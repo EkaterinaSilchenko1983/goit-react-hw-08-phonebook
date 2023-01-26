@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
 import {
   InputLabel,
   InputText,
@@ -23,7 +24,7 @@ export const ContactForm = () => {
     );
 
     if (searchName) {
-      return alert(`${toLowerCaseName} is already in contacts`);
+      return toast(`${toLowerCaseName} is already in contacts`);
     }
     // console.log(name.value, number.value);
     dispatch(addContact({ name: name.value, number: number.value }));

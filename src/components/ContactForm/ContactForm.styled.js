@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const FormContact = styled.form`
   width: 320px;
   margin: 0 auto;
-  text-align: center;
+  // text-align: center;
 `;
 
 export const InputLabel = styled.label`

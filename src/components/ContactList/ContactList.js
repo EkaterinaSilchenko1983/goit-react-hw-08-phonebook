@@ -1,7 +1,13 @@
 // import { PropTypes } from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
-
-import { ButtonDelete, ContactItem, List } from './ContactList.styled';
+import { IconContext } from 'react-icons';
+import { MdPermContactCalendar } from 'react-icons/md';
+import {
+  ButtonDelete,
+  ContactItem,
+  List,
+  WrapperIcon,
+} from './ContactList.styled';
 import { selectContacts } from '../../redux/contacts/contactsSlice';
 import { selectFilters } from 'redux/contacts/filtersSlice';
 import { deleteContact } from 'redux/contacts/operations';
@@ -24,7 +30,13 @@ export const ContactList = () => {
     <List>
       {vizibleContact.map(contact => (
         <ContactItem key={contact.id}>
-          {contact.name}: {contact.number}
+          <WrapperIcon>
+            <IconContext.Provider value={{ color: '#e6b0aa', size: 30 }}>
+              <MdPermContactCalendar />
+            </IconContext.Provider>
+            {contact.name}: {contact.number}
+          </WrapperIcon>
+
           <ButtonDelete
             type="button"
             onClick={() => dispatch(deleteContact(contact.id))}
